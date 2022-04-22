@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Display profile-->
+<div class="profile-container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mt-4">
+            <div class="image-container">
+                <img class="card-img-top img-fluid" src="{{ url_for('static', filename='images/'+profile.image ) }}"
+                    alt="{{ profile.fullname }}">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="profile-details-container mb-5 mt-5">
+                <h3 class="mb-0 font-weight-bold profile-info">{{ profile.fullname }}</h3>
+                <p><strong class="profile-info">Birthday:</strong> {{ profile.birthday }}
+                    <br><small><em class="profile-info">joined: {{ profile.date_created }}</em></small>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

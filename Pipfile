@@ -11,6 +11,7 @@ itsdangerous = "*"
 dnspython = "*"
 werkzeug = "*"
 click = "*"
+pymongo = "*"
 
 [dev-packages]
 
