@@ -57,7 +57,7 @@ def register():
             "username": request.form.get("username").lower(),
             "email": request.form.get("email").lower(),
             "password": generate_password_hash(request.form.get("password")),
-            "date_created": date.strftime("%d %b %Y")
+            "date_created": date.strftime("%d %b %Y"),
         }
         mongo.db.users.insert_one(register)
 
@@ -158,11 +158,8 @@ def my_profile(username):
         my_profile = list(mongo.db.profiles.find(
                 {"created_by": session["user"]}))
         user = mongo.db.users.find_one({"username": session["user"]})
-        admin = user['admin']
-        print(admin)
         return render_template("profile.html", username=username,
-                               user=user, profiles=my_profile,
-                               admin = admin)
+                               user=user, profiles=my_profile)
     return redirect(url_for('login'))
 
 
