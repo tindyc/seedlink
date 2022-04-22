@@ -1,102 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    <title>Seedlink</title>
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="An app to help people with cancer share experiences, ideas and resources">
+    <meta name="keywords" content="breast cancer, share experiences, breast cancer club, cancer club">
+    <title>SeedLink</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <!-- Bootstrap 5  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- style sheet -->
+    <link rel="stylesheet" href="{{ url_for('.static', filename='style.css') }}" type="text/css" />
+
+    {% block styles %}
+    {% endblock %}
+
 <body>
-      <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="{{ url_for('index') }}">Seedlink</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
+    <!--NAVIGATION-->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="{{ url_for('index') }}">SeedLink</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li>
+              <a href="{{ url_for('index') }}" class="menu-item">Home</a>
           </li>
+          {% if session.user %}
+            <li>
+              <a href="{{ url_for('my_profile', username=session['user']) }}" class="menu-item">My Profile</a>
+            </li>
+            <li>
+                <a href="{{ url_for('logout') }}" class="menu-item">Sign Out</a>
+            </li>
+          {% else %}
+            <li>
+                <a href="{{ url_for('login') }}" class="menu-item">Sign In</a>
+            </li>
+            <li>
+                <a href="{{ url_for('register') }}" class="menu-item">Sign Up</a>
+            </li>
+          {% endif %}
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>           
 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fadc668e-5f6a-4648-9d27-e91eb6973da7/d5nay7b-9991c1db-0f4a-4f3f-a95a-0b53947a14f9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZhZGM2NjhlLTVmNmEtNDY0OC05ZDI3LWU5MWViNjk3M2RhN1wvZDVuYXk3Yi05OTkxYzFkYi0wZjRhLTRmM2YtYTk1YS0wYjUzOTQ3YTE0ZjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eknvKAWOPVaW_j6s7cbG6EKi-TGwolEaaTetCmjNYUA')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Seedlink</h1>
-          </div>
-        </div>
+  <!--Display Flash Messages-->
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <section class="flash-container">
+    {% for message in messages %}
+    <div id="flashMessage{{loop.index}}" class="flash row">
+      <div class="col-12 col-md-6 offset-md-3">
+        <h4 class="flash-message text-center">{{ message }}</h4>
       </div>
     </div>
-  </header>
-
-  <!-- Main Content -->
-  <div class="container">
-      {% block content %}
-      {% endblock %}
-  </div>
-
-  <hr>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website <span id="copyright"></span></p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
-
-  <script>
-      $("#copyright").text(new Date().getFullYear());
-  </script>
-
+    {% endfor %}
+  </section>
+  {% endif %}
+  {% endwith %}
+            
+    {% block content %}
+    {% endblock %}
+   
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- Custom scripts -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block scripts %}
+    {% endblock %}
 </body>
-</html>
