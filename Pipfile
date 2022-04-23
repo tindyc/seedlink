@@ -12,6 +12,8 @@ dnspython = "*"
 werkzeug = "*"
 click = "*"
 pymongo = "*"
+gunicorn = "*"
+heroku = "*"
 
 [dev-packages]
 
