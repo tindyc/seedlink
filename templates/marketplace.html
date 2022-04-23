@@ -1,4 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Display Products</h2>
+<!-- Product Entries Column -->
+<div class="container-fluid">
+    <div class="row">
+        <h1 class="text-center">Marketplace</h1>
+    </div>
+    <div class="row">
+        <!-- Product Entries Column -->
+        <div class="col-12 mt-4 left">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-md-3">
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.product_name }}</h5>
+                            <p class="text-muted">{{ product.product_category }}</p>
+                            <p class="card-text">{{ product.quantity }} kg. Available</p>
+                        </div>
+                    </div>
+                </div>
+                {% if loop.index % 4 == 0 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
