@@ -32,9 +32,15 @@
           <li>
               <a href="{{ url_for('index') }}" class="menu-item">Home</a>
           </li>
+          <li>
+            <a href="{{ url_for('marketplace') }}" class="menu-item">Marketplace</a>
+          </li>
           {% if session.user %}
             <li>
               <a href="{{ url_for('my_profile', username=session['user']) }}" class="menu-item">My Profile</a>
+            </li>
+            <li>
+              <a href="{{ url_for('donation_form') }}" class="menu-item">Donation</a>
             </li>
             <li>
                 <a href="{{ url_for('logout') }}" class="menu-item">Sign Out</a>

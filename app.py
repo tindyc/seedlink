@@ -30,6 +30,18 @@ def index():
     return render_template("index.html")
 
 
+# Renders display products page
+@app.route("/marketplace")
+def marketplace():
+    return render_template("marketplace.html")
+
+
+# Renders register products page
+@app.route("/donation_form")
+def donation_form():
+    return render_template("donation_form.html")
+
+
 # Register user in the db
 @app.route("/register", methods=["GET", "POST"])
 def register():
