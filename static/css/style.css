@@ -1,0 +1,17 @@
+/*
+
+.image-container {
+    height: 100%;
+}
+
+.image-veg {
+    background: url(../images/veg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+.tree{
+    
+    border-radius: 50%;
+}
