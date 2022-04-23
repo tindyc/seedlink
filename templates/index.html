@@ -1,53 +1,89 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="container-fluid ordering">
-    <div class="row">
-        <div class="col-sm-6">
-                <h2>Let's Get Growing</h2>
-                <p>Would you like to grow a beautuful tree in your garden?</p>
-                <p>Or some veggies for your dinner?</p>
-                <p>Would you like to share your home grown produce with your local community?</p>
-                <p>Order some seeds and get growing!</p>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-success">Order Seeds</button>
-                    <button type="button" class="btn btn-success">Read More</button>
-                </div>
-                
+<section id="main-section" class="container-fluid mt-4 p-5">
+    <div class="row align-items-center h-100">
+        <div class="col-sm-6 text-center mx-auto">
+            <h2 class="mb-3">Let's Get Growing</h2>
+            <p>Would you like to grow a beautuful tree in your garden?</p>
+            <p>Or some veggies for your dinner?</p>
+            <p>Would you like to share your home grown produce with your local community?</p>
+            <p>Order some seeds and get growing!</p>
+            <div class="mt-4">
+                <a href="" class="btn btn-lg btn-success mx-1">Order Seeds</a>
+                <a href="#about" class="btn btn-lg btn-outline-success border-2 mx-1">Read More</a>
             </div>
-                
-        
+
+        </div>
+
+
         <div class="col-sm-6 image-container">
             <img src="static/images/veg.jpg" class="img-fluid" alt="Responsive image">
         </div>
 
     </div>
 </section>
-<section class="container-fluid about-us">
-    <div class="row">
-        <div class="col-sm-6">
-            <h2>About Seedlink</h2>
-            <br>
+
+<section id="about" class="container-fluid about-us bg-light p-5">
+    <div class="row align-items-center h-100">
+        <div class="col-sm-6 text-center mx-auto">
+            <h2 class="mb-3">About SeedLink</h2>
             <p>
-                Seedlink is a site for ordering seeds and sharing produce. You can either grow a beautiful tree 
+                Seedlink is a site for ordering seeds and sharing produce. You can either grow a beautiful tree
                 and help our planet or grow some fruit or vegetables.
                 Once your friuts and/or vegetables are ready you can share your excess produce
                 with your local community.
             </p>
             <p>
-                Just log how much extra produce you have on the donation page and we will collect or you can bring them 
+                Just log how much extra produce you have on the donation page and we will collect or you can bring them
                 to our weekley market. These will be shared with anyone that needs them for free.
             </p>
             <p>
-                You dont need to get the seeds from us in order to share.  
+                You dont need to get the seeds from us in order to share.
                 Any fruit or vegetables can be gifted to the market.
             </p>
-            <p>so join in, get outside and become a planter.  You can promote plan based eating,
+            <p>so join in, get outside and become a planter. You can promote plan based eating,
                 help the environment and your local community along the way.
             </p>
-            <button type="button" class="btn btn-success">View Available Products</button>
+            <a href="{{ url_for('marketplace') }}" class="btn btn-lg btn-success mx-1 m-5">View Available Products</a>
         </div>
-        <div class="col-sm-6 image-container tree">
-            <img src="static/images/tree.jpg" class="img-fluid" alt="Responsive image">
+
+        <div class="col-sm-6 image-container-tree mx-auto text-center">
+            <img src="static/images/tree.jpg" class="tree-img rounded-circle" alt="Responsive image">
+        </div>
+
+    </div>
+</section>
+
+<section class="py-5">
+    <!-- Product Entries Column -->
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">Recent Products</h1>
+        </div>
+        <div class="row">
+            <!-- Product Entries Column -->
+            <div class="col-12 mt-4 left">
+                <div class="row mx-3">
+                    {% for product in products %}
+                    <div class="col-md-3">
+                        <div class="card mb-4">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.product_name }}</h5>
+                                <p class="text-muted">{{ product.product_category }}</p>
+                                <p class="card-text">{{ product.quantity }}
+                                    {% if product.product_category == "Seeds" %}seeds{% else %}Kg.{% endif %} Available
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="text-center">
+                    <a href="{{ url_for('marketplace') }}" class="btn btn-lg btn-success mx-1 m-5">View More
+                        Products</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
