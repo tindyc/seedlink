@@ -8,7 +8,7 @@
     <div class="row">
         <!-- Product Entries Column -->
         <div class="col-12 mt-4 left">
-            <div class="row">
+            <div class="row mx-3">
                 {% for product in products %}
                 <div class="col-md-3">
                     <div class="card mb-4">
@@ -22,7 +22,7 @@
                 </div>
                 {% if loop.index % 4 == 0 %}
             </div>
-            <div class="row">
+            <div class="row mx-3">
                 {% endif %}
                 {% endfor %}
             </div>

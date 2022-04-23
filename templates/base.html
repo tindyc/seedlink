@@ -2,61 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="An app to help people with cancer share experiences, ideas and resources">
-    <meta name="keywords" content="breast cancer, share experiences, breast cancer club, cancer club">
-    <title>SeedLink</title>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <!-- Bootstrap 5  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- style sheet -->
-    <link rel="stylesheet" href="{{ url_for('.static', filename='css/style.css') }}" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="description" content="An app to help people with cancer share experiences, ideas and resources">
+  <meta name="keywords" content="breast cancer, share experiences, breast cancer club, cancer club">
+  <title>SeedLink</title>
 
-    {% block styles %}
-    {% endblock %}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <!-- Bootstrap 5  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- style sheet -->
+  <link rel="stylesheet" href="{{ url_for('.static', filename='css/style.css') }}" type="text/css" />
+
+  {% block styles %}
+  {% endblock %}
+</head>
 
 <body>
-    <!--NAVIGATION-->
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="{{ url_for('index') }}">SeedLink</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li>
-              <a href="{{ url_for('index') }}" class="menu-item">Home</a>
-          </li>
-          <li>
-            <a href="{{ url_for('marketplace') }}" class="menu-item">Marketplace</a>
-          </li>
-          {% if session.user %}
-            <li>
-              <a href="{{ url_for('my_profile', username=session['user']) }}" class="menu-item">My Profile</a>
+  <!--NAVIGATION-->
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex" href="{{ url_for('index') }}">
+          <i class="fas fa-leaf p-1"></i> SeedLink
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse position-relative" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 position-absolute end-0">
+            <li class="nav-item">
+              <a href="{{ url_for('index') }}" class="nav-link">Home</a>
             </li>
             <li>
-              <a href="{{ url_for('add_donation') }}" class="menu-item">Donation</a>
+              <a href="{{ url_for('marketplace') }}" class="nav-link">Marketplace</a>
+            </li>
+            {% if session.user %}
+            <li class="nav-item">
+              <a href="{{ url_for('my_profile', username=session['user']) }}" class="nav-link">My Profile</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url_for('add_donation') }}" class="nav-link">Donation</a>
             </li>
             <li>
-                <a href="{{ url_for('logout') }}" class="menu-item">Sign Out</a>
+              <a href="{{ url_for('logout') }}" class="nav-link">Sign Out</a>
+            </li class="nav-item">
+            {% else %}
+            <li class="nav-item">
+              <a href="{{ url_for('login') }}" class="nav-link">Sign In</a>
             </li>
-          {% else %}
-            <li>
-                <a href="{{ url_for('login') }}" class="menu-item">Sign In</a>
+            <li class="nav-item">
+              <a href="{{ url_for('register') }}" class="nav-link">Sign Up</a>
             </li>
-            <li>
-                <a href="{{ url_for('register') }}" class="menu-item">Sign Up</a>
-            </li>
-          {% endif %}
-        </ul>
+            {% endif %}
+          </ul>
+        </div>
       </div>
     </nav>
-  </header>           
+  </header>
 
   <!--Display Flash Messages-->
   {% with messages = get_flashed_messages() %}
@@ -72,17 +79,69 @@
   </section>
   {% endif %}
   {% endwith %}
-            
-    {% block content %}
-    {% endblock %}
-   
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
-    <!-- Custom scripts -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    {% block scripts %}
-    {% endblock %}
+
+  {% block content %}
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-light text-dark pt-5 px-4">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="d-none d-lg-block col-lg-6 text-left">
+          <h3>Good on people,</h3>
+          <h3>the planet and animals,</h3>
+          <h3>Good on you.</h3>
+        </div>
+
+        <div class="col-lg-2 col-sm-4">
+          <h6>Follow us on</h6>
+          <ul class="list-unstyled mt-3">
+            <li><a class="link-dark" href="https://facebook.com" target="_blank" rel="noopener"
+                aria-label="Visit our Facebook page (opens on a new tab)">Facebook</a></li>
+            <li><a class="link-dark" href="https://instagram.com" target="_blank" rel="noopener"
+                aria-label="Visit our Instagram page (opens on a new tab)">Instagram</i></a></li>
+            <li><a class="link-dark" href="https://youtube.com" target="_blank" rel="noopener"
+                aria-label="Visit our Youtube page (opens on a new tab)">Youtube</a></li>
+            <li><a class="link-dark" href="https://twitter.com" target="_blank" rel="noopener"
+                aria-label="Visit our Twitter page (opens on a new tab)">Twitter</i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-sm-4">
+          <h6>Nitty Gritty</h6>
+          <ul class="list-unstyled mt-3">
+            <li>Terms &amp; Conditions</li>
+            <li>Privacy Policy</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-sm-4">
+          <a class="link-dark" href="{{ url_for('index') }}"
+            class="d-flex justify-content-center text-decoration-none link-color-light">
+            <i class="fas fa-leaf p-1"></i> SeedLink
+          </a>
+        </div>
+
+      </div>
+
+      <div class="row text-muted text-center mt-3">
+        <p>Copyright &copy; 2022 SeedLink. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Custom scripts -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  {% block scripts %}
+  {% endblock %}
 </body>

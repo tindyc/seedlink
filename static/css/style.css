@@ -1,3 +1,28 @@
+/* Header */
+.navbar-brand {
+    color: #009E0F !important;
+}
+
+.nav-link {
+    color: #009E0F !important;
+}
+
+.nav-link:hover {
+    color: #36783d !important;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
 /*
 
 .image-container {
