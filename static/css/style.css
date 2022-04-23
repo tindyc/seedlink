@@ -1,3 +1,10 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* Header */
 .navbar-brand {
     color: #009E0F !important;
@@ -12,13 +19,6 @@
 }
 
 /* Footer */
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 a:link {
     text-decoration: none;
 }
@@ -36,7 +36,7 @@ a:link {
     background-size: cover;
 }*/
 
-.tree{
-    
+.tree {
+
     border-radius: 50%;
 }
