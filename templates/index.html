@@ -1,4 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Index</h2>
+<section class="container-fluid ordering">
+    <div class="row">
+        <div class="col-sm-6">
+                <h2>Let's Get Growing</h2>
+                <p>Would you like to grow a beautuful tree in your garden?</p>
+                <p>Or some veggies for your dinner?</p>
+                <p>Would you like to share your home grown produce with your local community?</p>
+                <p>Order some seeds and get growing!</p>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-success">Order Seeds</button>
+                    <button type="button" class="btn btn-success">Read More</button>
+                </div>
+                
+            </div>
+                
+        
+        <div class="col-sm-6 image-container">
+            <img src="static/images/veg.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+
+    </div>
+</section>
+<section class="container-fluid about-us">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>About Seedlink</h2>
+            <br>
+            <p>
+                Seedlink is a site for ordering seeds and sharing produce. You can either grow a beautiful tree 
+                and help our planet or grow some fruit or vegetables.
+                Once your friuts and/or vegetables are ready you can share your excess produce
+                with your local community.
+            </p>
+            <p>
+                Just log how much extra produce you have on the donation page and we will collect or you can bring them 
+                to our weekley market. These will be shared with anyone that needs them for free.
+            </p>
+            <p>
+                You dont need to get the seeds from us in order to share.  
+                Any fruit or vegetables can be gifted to the market.
+            </p>
+            <p>so join in, get outside and become a planter.  You can promote plan based eating,
+                help the environment and your local community along the way.
+            </p>
+            <button type="button" class="btn btn-success">View Available Products</button>
+        </div>
+        <div class="col-sm-6 image-container tree">
+            <img src="static/images/tree.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+</section>
+
 {% endblock %}
