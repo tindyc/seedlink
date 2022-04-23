@@ -30,10 +30,13 @@ def index():
     return render_template("index.html")
 
 
-# Renders display products page
-@app.route("/marketplace")
+# Renders marketplace page
+@app.route("/marketplace", methods=["GET"])
 def marketplace():
-    return render_template("marketplace.html")
+    if request.method == "GET":
+        products = mongo.db.donation.find({})
+
+    return render_template("marketplace.html", products=products)
 
 
 # Register user in the db
