@@ -36,19 +36,13 @@ def marketplace():
     return render_template("marketplace.html")
 
 
-# Renders register products page
-@app.route("/donation_form")
-def donation_form():
-    return render_template("donation_form.html")
-
-
 # Register user in the db
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         # Check if user already in db
         existing_user = mongo.db.users.find_one(
-                        {"username": request.form.get("username").lower()})
+            {"username": request.form.get("username").lower()})
 
         if existing_user:
             flash("Username already exists!")
@@ -56,7 +50,7 @@ def register():
 
         # check if email already in db
         existing_email = mongo.db.users.find_one(
-                        {"email": request.form.get("email").lower()})
+            {"email": request.form.get("email").lower()})
 
         if existing_email:
             flash("Email address already registered!")
@@ -87,7 +81,7 @@ def login():
     if request.method == "POST":
         # Check if user already in db
         existing_user = mongo.db.users.find_one(
-                        {"username": request.form.get("username").lower()})
+            {"username": request.form.get("username").lower()})
         # ensure password matches
         if existing_user:
             if check_password_hash(existing_user["password"],
@@ -168,11 +162,31 @@ def my_profile(username):
         {"username": session["user"]})["username"]
     if session["user"]:
         my_profile = list(mongo.db.profiles.find(
-                {"created_by": session["user"]}))
+            {"created_by": session["user"]}))
         user = mongo.db.users.find_one({"username": session["user"]})
         return render_template("profile.html", username=username,
                                user=user, profiles=my_profile)
     return redirect(url_for('login'))
+
+
+# Add Donation form
+@app.route("/add_donation", methods=["GET", "POST"])
+def add_donation():
+    if request.method == "POST":
+        donation = {
+            "product_category": request.form.get("product_category"),
+            "product_name": request.form.get("product_name"),
+            "quantity": request.form.get("quantity"),
+            "expiry_date": request.form.get("expiry_date"),
+            "created_by": session["user"],
+            "date_created": date.strftime("%d %b %Y"),
+        }
+        mongo.db.donation.insert_one(donation)
+        flash("Your donation has been added to the marketplace!")
+        return redirect(url_for("marketplace"))
+
+    donation = mongo.db.donation.find().sort("product_category", 1)
+    return render_template("add_donation.html", donation=donation)
 
 
 if __name__ == "__main__":
