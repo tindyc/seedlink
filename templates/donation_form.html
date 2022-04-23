@@ -1,4 +1,34 @@
 {% extends "base.html" %}
+
 {% block content %}
-    <h2>Donation Form</h2>
+<!-- Page Heading -->
+<div class="row text-center">
+    <div class="col-10 offset-1 col-md-6 offset-md-3">
+        <h1 class="form-heading-signup">Donation</h1>
+    </div>
+</div>
+<!-- Add Donation Form-->
+<form method="POST" action="" class="col-10 offset-1">
+    <div class="form-group">
+        <label for="product_category">Product Category</label>
+        <input type="text" class="form-control" id="product_category" name="product_category" placeholder="Fruits/Vegs/Seeds" required>
+    </div>
+
+    <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Quantity" required>
+    </div>
+
+    <div class="form-group">
+        <label for="expiry_date">Expiary Date</label>
+        <input type="date" class="form-control" id="expiry_date" name="expiry_date" placeholder="Expiry Date">
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <button type="submit" class="btn">Donate!</button>
+        </div>
+    </div>
+</form>
+
 {% endblock %}
