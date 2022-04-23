@@ -1,9 +1,12 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap');
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 /* Fonts */
@@ -11,6 +14,19 @@ body {
     font-family: 'Kaushan Script', cursive;
     font-size: 1.5em;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+.card-title {
+    color: #009E0F;
+} 
 
 /* Buttons */
 .btn-success {
@@ -54,7 +70,6 @@ a:link {
 }
 
 /* Landing page */
-
 .tree-img {
     width: 400px;
     height: 400px;
@@ -64,7 +79,6 @@ a:link {
 }
 
 /*  Sign In */
-
 .form-heading-signup {
     margin-top: 50px;
     margin-bottom: 20px;
@@ -79,4 +93,23 @@ a:link {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+/* Markeplace page */
+#marketplace-img-container {
+    height: 400px;
+    width: 100wv;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#marketplace-img {
+    height: 400px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/marketplace.jpg') no-repeat center center;
+}
+
+#marketplace-img > h1 {
+    color: #fff;
+    font-size: 3.5em;
 }
