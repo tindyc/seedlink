@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="description" content="An app to help people with cancer share experiences, ideas and resources">
-  <meta name="keywords" content="breast cancer, share experiences, breast cancer club, cancer club">
+  <meta name="description" content="Seedlink is a site for ordering seeds and sharing produce.">
+  <meta name="keywords" content="Surplus fruits and vegetables, grow a tree, carbon footprint">
   <title>SeedLink</title>
 
   <!-- Font Awesome -->
@@ -26,7 +26,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex" href="{{ url_for('index') }}">
+        <a class="navbar-brand d-flex logo main-logo" href="{{ url_for('index') }}">
           <i class="fas fa-leaf p-1"></i> SeedLink
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -84,7 +84,7 @@
   {% endblock %}
 
   <!-- Footer -->
-  <footer class="text-center text-lg-start bg-light text-dark pt-5 px-4">
+  <footer class="footer text-center text-lg-start bg-light text-dark pt-5 px-4 mt-auto">
     <div class="container-fluid">
       <div class="row">
 
@@ -94,6 +94,7 @@
           <h3>Good on you.</h3>
         </div>
 
+        <!-- Social Media links -->
         <div class="col-lg-2 col-sm-4">
           <h6>Follow us on</h6>
           <ul class="list-unstyled mt-3">
@@ -117,8 +118,8 @@
           </ul>
         </div>
 
-        <div class="col-lg-2 col-sm-4">
-          <a class="link-dark" href="{{ url_for('index') }}"
+        <div class="col-lg-2 col-sm-4 h-100">
+          <a class="link-dark logo mx-auto" href="{{ url_for('index') }}"
             class="d-flex justify-content-center text-decoration-none link-color-light">
             <i class="fas fa-leaf p-1"></i> SeedLink
           </a>

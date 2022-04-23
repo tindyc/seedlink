@@ -27,14 +27,17 @@ date = date.today()
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    if request.method == "GET":
+        products = mongo.db.donation.find().limit(4).sort("date_created", 1)
+
+    return render_template("index.html", products=products)
 
 
 # Renders marketplace page
 @app.route("/marketplace", methods=["GET"])
 def marketplace():
     if request.method == "GET":
-        products = mongo.db.donation.find({})
+        products = mongo.db.donation.find()
 
     return render_template("marketplace.html", products=products)
 
@@ -190,6 +193,22 @@ def add_donation():
 
     donation = mongo.db.donation.find().sort("product_category", 1)
     return render_template("add_donation.html", donation=donation)
+
+# Add Order_Seeds form
+@app.route("/order_seeds", methods=["GET", "POST"])
+def order_seeds():
+    if request.method == "POST":
+        order_seeds = {
+            "Seed Name": request.form.get("seed_name"),
+            "Quantity": request.form.get("quantity"),
+            "date_ordered": date.strftime("%d %b %Y"),
+            }
+        mongo.db.order_seeds.insert_one(order_seeds)
+        flash("Your Seeds Has Been Ordered!")
+        return redirect(url_for("marketplace"))
+
+    order_seeds = mongo.db.order_seeds.find().sort("seed_name", 1)
+    return render_template("order_seeds.html", order_seeds=order_seeds)
 
 
 if __name__ == "__main__":

@@ -1,10 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Fonts */
+.logo {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.5em;
+}
+
+/* Buttons */
+.btn-success {
+    background-color: #009E0F;
+    border-color: #009E0F;
+}
+
+.btn-outline-success {
+    color: #009E0F;
+    border-color: #009E0F;
+}
+
+.btn-success:hover {
+    background-color: #36783d;
+    border-color: #36783d;
+}
+
+.btn-outline-success:hover {
+    background-color: #009E0F;
+    border-color: #009E0F;
+}
+
 /* Header */
 .navbar-brand {
     color: #009E0F !important;
+    font-size: 3em;
 }
 
 .nav-link {
     color: #009E0F !important;
+    font-size: 1.1em;
 }
 
 .nav-link:hover {
@@ -12,35 +49,19 @@
 }
 
 /* Footer */
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 a:link {
     text-decoration: none;
 }
 
-/*
+/* Landing page */
 
-.image-container {
-    height: 100%;
+.tree-img {
+    width: 400px;
+    height: 400px;
 }
-
-.image-veg {
-    background: url(../images/veg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
-
-.tree{
-    
-    border-radius: 50%;
+#main-section {
+    height: 100vh;
 }
-
 
 /*  Sign In */
 
@@ -48,6 +69,7 @@ a:link {
     margin-top: 50px;
     margin-bottom: 20px;
 }
+
 #login-btn {
     background-color: #009E0F;
 }

@@ -16,7 +16,9 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ product.product_name }}</h5>
                             <p class="text-muted">{{ product.product_category }}</p>
-                            <p class="card-text">{{ product.quantity }} kg. Available</p>
+                            <p class="card-text">{{ product.quantity }}
+                                {% if product.product_category == "Seeds" %}seeds{% else %}Kg.{% endif %} Available
+                            </p>
                         </div>
                     </div>
                 </div>
