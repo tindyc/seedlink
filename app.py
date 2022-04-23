@@ -195,6 +195,8 @@ def add_donation():
     return render_template("add_donation.html", donation=donation)
 
 # Add Order_Seeds form
+
+
 @app.route("/order_seeds", methods=["GET", "POST"])
 def order_seeds():
     if request.method == "POST":
@@ -202,13 +204,22 @@ def order_seeds():
             "username": session["user"],
             "quantity": request.form.get("quantity"),
             "date_ordered": date.strftime("%d %b %Y"),
-            }
+        }
         mongo.db.order_seeds.insert_one(order_seeds)
         flash("Your Seeds Have Been Ordered!")
         return redirect(url_for("marketplace"))
 
     order_seeds = mongo.db.order_seeds.find().sort("seed_name", 1)
     return render_template("order_seeds.html", order_seeds=order_seeds)
+
+# 404 error page
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    Renders a custom 404 error page with a button
+    that takes the user back to the home page.
+    """
+    return render_template('404.html'), 404
 
 
 if __name__ == "__main__":
