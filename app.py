@@ -199,12 +199,12 @@ def add_donation():
 def order_seeds():
     if request.method == "POST":
         order_seeds = {
-            "Seed Name": request.form.get("seed_name"),
-            "Quantity": request.form.get("quantity"),
+            "username": session["user"],
+            "quantity": request.form.get("quantity"),
             "date_ordered": date.strftime("%d %b %Y"),
             }
         mongo.db.order_seeds.insert_one(order_seeds)
-        flash("Your Seeds Has Been Ordered!")
+        flash("Your Seeds Have Been Ordered!")
         return redirect(url_for("marketplace"))
 
     order_seeds = mongo.db.order_seeds.find().sort("seed_name", 1)
