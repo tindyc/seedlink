@@ -27,14 +27,17 @@ date = date.today()
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    if request.method == "GET":
+        products = mongo.db.donation.find().limit(4).sort("date_created", 1)
+
+    return render_template("index.html", products=products)
 
 
 # Renders marketplace page
 @app.route("/marketplace", methods=["GET"])
 def marketplace():
     if request.method == "GET":
-        products = mongo.db.donation.find({})
+        products = mongo.db.donation.find()
 
     return render_template("marketplace.html", products=products)
 
