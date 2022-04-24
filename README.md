@@ -162,6 +162,9 @@ Both the Header and Footer are present and consistent on all website pages.
 
 ### **Features to consider implementing in future**
 
+  * **Image Upload**: Use Cloudinary to support image upload
+  * **Reservation**: Implement a reservation / ticketed system for users to reserve produce
+
 
 ## 3. **Database Design**
 MongoDB was the database solution used for the website development, using the below, structured plan.
