@@ -3,19 +3,19 @@
 {% block content %}
 <!-- Page Heading -->
 <section class="container-fluid">
-    <div class="row">
-        <div class="col-lg-7 col-md-7 col-sm-12">
+    <div class="row align-items-center h-100 my-5">
+        <div class="col-12 col-md-6">
             <div class="row text-center">
                 <div class="col-10 offset-1 col-md-6 offset-md-3">
                     <h1 class="form-heading-signup">Donation</h1>
                 </div>
             </div>
             <!-- Add Donation Form-->
-            <form method="POST" action="" class="col-10 offset-1">
+            <form method="POST" action="" class="col-8 offset-2">
 
                 <div class="form-group">
                     <select class="form-select mb-3" aria-label="Produce Category">
-                        <option value="1">Choose from list</option>
+                        <option value="1">Choose category</option>
                         <option value="2">Fruits</option>
                         <option value="3">Vegetables</option>
                         <option value="4">Seeds</option>
@@ -33,12 +33,9 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="date" class="form-control mb-3" id="expiry_date" name="expiry_date"
+                    <label for="expiry_date">Expiry Date</label>
+                    <input type="date" class="form-control mb-5" id="expiry_date" name="expiry_date"
                         placeholder="Expiry Date">
-                </div>
-
-                <div class="form-group">
-                    <input type="file" class="form-control-file mb-3" id="image" name="image">
                 </div>
 
                 <div class="row">
@@ -48,7 +45,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-4 sign-up d-none d-md-block ">
+        <div class="col-6 side-img d-none d-md-block ">
             <img src="../static/images/donations.jpg" alt="Please give donations">
         </div>
     </div>

@@ -97,18 +97,8 @@ a:link {
     margin-bottom: 20px;
 }
 
-.sign-in img {
-    margin-top: 50px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-  /* Sign-up */
-
-.sign-up img {
-    margin-top: 50px;
-    width: 100%;
+.side-img img {
+    width: 80%;
     height: 100%;
     object-fit: cover;
 }

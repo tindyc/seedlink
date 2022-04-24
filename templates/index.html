@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="main-section" class="container-fluid mt-4 p-5">
+<section id="main-section" class="container-fluid p-5">
     <div class="row align-items-center h-100">
         <div class="col-sm-6 text-center mx-auto">
             <h2 class="mb-3">Let's Get Growing</h2>
@@ -9,7 +9,7 @@
             <p>Would you like to share your home grown produce with your local community?</p>
             <p>Order some seeds and get growing!</p>
             <div class="mt-4">
-                <a href="{{ url_for('order_seeds') }}" class="btn btn-lg btn-success mx-1 button-bottom">Order Seeds</a>
+                <a href="{{ url_for('register') }}" class="btn btn-lg btn-success mx-1 button-bottom">Join Us!</a>
                 <a href="#about" class="btn btn-lg btn-outline-success border-2 mx-1 button-bottom">Read More</a>
             </div>
 
