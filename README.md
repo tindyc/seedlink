@@ -175,7 +175,6 @@ Both the Header and Footer are present and consistent on all website pages.
   * **Enail** - Text
   * **Password** - Text
 
-
 #### Order Seeds Page:
 
 * **Input areas for below seeds ordering data points**:
@@ -183,7 +182,6 @@ Both the Header and Footer are present and consistent on all website pages.
   * **Address** - Text
   * **Seed Category** - Text
   * **Quantity** - Selector
-
  
 #### Donation Page:
 
@@ -205,6 +203,9 @@ Both the Header and Footer are present and consistent on all website pages.
 * **Social Media Sharing** - Allow users to share available produce on the marketplace directly to their social media accounts.
 * **Chat functionality** - Allows registered users to private message individual members and order surplus produce directly.
 * **Advanced User Profile** - Allow users to customize their own profile with custom information they wish to provide and share with other members.
+* **Expand marketplace** - SeedLink is currently for a local area so as the site grows, diffrent market location dates and locations would be added.
+* **Planting Guides** - A page with guides on planting and growing the different vegetables and trees on the site.
+* **Social Page** - A soscial page where growers can share tips about growing and get to connect.
 
 ## 3. **Database Design**
 MongoDB was the database solution used for the website development, using the below, structured plan.
