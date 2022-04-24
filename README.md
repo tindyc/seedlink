@@ -26,29 +26,28 @@ The live website can be found at the following link; [SeedLink](https://seed-lin
 
 #### General
 
-
 ### **Structure**
 Overview of site and page structure, explaining functionality and purpose.
 
 #### Home Page:
-
   * **Navigation Bar/Footer**: For easy navigation across the site and to external resources such as social media pages.
   * **Website Logo**: To easily identify the 'SeedLink’' site branding.
   * **Site Features**: To easily provide users with an overview of the website’s features.
-
-#### My Profile:
- * **Profile Card**: To easily provide users key information of their own profile, including visual image, type of member, full name, birthday, location and date joined.
- * **Update Profile Button**: To allow users to edit their profile with easy access.
+  
+#### Order Seeds Page
+ * **Name Input**: Text input box, allowing users to enter their Name.
+ * **Address Input**: Text input box, allowing users to enter their address.
+ * **Seed category Input**: Text input box, allowing users to choose seed category.
+ * **Quantity Input**: Text input box, allowing users to enter their desired quantity of the seeds.
+ * **Order Now Button**: To allow users to submit entered information and order the seeds.
  
 #### Sign In Page:
-
  * **Username Input**: Text input box, allowing users to enter their username.
  * **Password Input**: Text input box, allowing users to enter their password.
  * **Sign In Button**: To allow users to submit entered information, and if correct credentials will be directed to the profile page.
  * **Sign Up  Button**: To allow users to be directed to the registration page.
 
 #### Sign Up Page:
-
  * **First Name Input**: Text input box, allowing users to enter their First Name.
  * **Last Name Input**: Text input box, allowing users to enter their Last Name.
  * **Username Input**: Text input box, allowing users to enter their username.
@@ -56,6 +55,17 @@ Overview of site and page structure, explaining functionality and purpose.
  * **Password Input**: Text input box, allowing users to enter their password.
  * **Sign Up Button**: To allow users to submit entered information and register for an account.
 
+#### Profile Page:
+ * **Profile Card**: To easily provide users key information of their own profile, including visual image, type of member, full name, birthday, location and date joined.
+ * **Update Profile Button**: To allow users to edit their profile with easy access.
+
+#### Donation Page:
+ * **Produce category Input**: Text input box, allowing users to choose produce category.
+ * **Produce Name Input**: Text input box, allowing users to enter the name of the produce.
+ * **Quantity Input**: Text input box, allowing users to enter the quantity they are willing to donate.
+ * **Expiry date Input**: To allow users to enter the expiry date of the produce. 
+ * **Donate Button**: To allow users to submit entered information and donate their produce.
+ 
 ### **Skeleton**
 
 At this point I began creating wireframes, using the above structure considerations. I used [Balsamiq](https://balsamiq.com/) these below;
