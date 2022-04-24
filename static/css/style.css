@@ -129,3 +129,9 @@ a:link {
     color: #fff;
     font-size: 3.5em;
 }
+
+/* Order seeds */
+
+#order-seeds-btn {
+    background-color: #009E0F;
+}

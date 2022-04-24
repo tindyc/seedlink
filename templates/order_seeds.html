@@ -2,44 +2,50 @@
 
 {% block content %}
 <!-- Page Heading -->
-<div class="row text-center">
-    <div class="col-10 offset-1 col-md-6 offset-md-3">
-        <h1 class="form-heading-signup">Order your Seeds</h1>
-    </div>
-</div>
-<!-- Add Donation Form-->
-<form method="POST" action="" class="col-10 offset-1">
-
-    <div class="form-group">
-        <label for="fullname">Name</label>
-        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Name" required>
-    </div>
-
-    <div class="form-group">
-        <label for="address">Address</label>
-        <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
-    </div>
-
-
-    <div class="form-group">
-        <label for="seeds_type">Type of seeds</label>
-        <select class="form-select" aria-label="Type of Seed">
-            <option value="1">Apple Tree</option>
-            <option value="2">Tomato</option>
-            <option value="3">Spinach</option>
-          </select>
-    </div>
-
-    <div class="form-group">
-        <label for="quantity">Quantity</label>
-        <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Quantity" required>
-    </div>
-
+<section class="container-fluid">
     <div class="row">
-        <div class="col-12 text-center">
-            <button type="submit" class="btn">Order Now!</button>
+        <div class="col-lg-7 col-md-7 col-sm-12">
+            <div class="row text-center">
+                <div class="col-10 offset-1 col-md-6 offset-md-3">
+                    <h1 class="form-heading-signup">Order your Seeds</h1>
+                </div>
+            </div>
+            <!-- Add Donation Form-->
+            <form method="POST" action="" class="col-10 offset-1">
+
+                <div class="form-group">
+                    <input type="text" class="form-control mb-3" id="fullname" name="fullname" placeholder="Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control mb-3" id="address" name="address" placeholder="Address" required>
+                </div>
+
+
+                <div class="form-group">
+                    <select class="form-select mb-3" aria-label="Type of Seed">
+                        <option value="1">Apple Tree</option>
+                        <option value="2">Tomato</option>
+                        <option value="3">Spinach</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" class="form-control mb-3" id="quantity" name="quantity" placeholder="Quantity"
+                        required>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn mb-3" id="order-seeds-btn">Order Now!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-3 sign-up d-none d-md-block">
+            <img src="../static/images/seeds.jpg" alt="assorted seeds on display">
         </div>
     </div>
-</form>
+</section>
 
 {% endblock %}
