@@ -49,6 +49,10 @@ h6 {
     border-color: #009E0F;
 }
 
+.button-bottom {
+    margin-bottom: 1rem;
+    }
+
 /* Header */
 .navbar-brand {
     color: #009E0F !important;
@@ -75,6 +79,13 @@ a:link {
     height: 400px;
 }
 
+@media only screen and (max-width: 846px) {
+    .tree-img {
+        width: 275px;
+        height: 275px;
+    }
+}
+
 #main-section {
     height: 100vh;
 }
@@ -96,7 +107,7 @@ a:link {
     height: 100%;
     object-fit: cover;
 }
-  
+
   /* Sign-up */
 
 .sign-up img {
