@@ -33,11 +33,11 @@ Overview of site and page structure, explaining functionality and purpose.
 #### Home Page:
 
   * **Navigation Bar/Footer**: For easy navigation across the site and to external resources such as social media pages.
-  * **Website Logo**: To easily identify the 'Crypto Connect’' site branding.
+  * **Website Logo**: To easily identify the 'SeedLink’' site branding.
   * **Site Features**: To easily provide users with an overview of the website’s features.
 
 #### My Profile:
- * **Profile Card**: To easily provide users key information of their own profile, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined.
+ * **Profile Card**: To easily provide users key information of their own profile, including visual image, type of member, full name, birthday, location and date joined.
  * **Update Profile Button**: To allow users to edit their profile with easy access.
  
 #### Sign In Page:
@@ -97,7 +97,7 @@ During the pre-development phase, I listed out some styling ideas that I thought
 
 
 ## 2. **Features**
-The site allows users to register for an account. Users are able to login and logout of the site. They can create, upload and update their own profiles. Registered users are able to view other member’s profiles and make connections with them. Users can search for other members using their name or location. Users can see all the connections they have made in their profile page and remove existing connections at any time. Users are able to upload new blog posts, edit and delete existing ones that they have created. 
+
 
 ### CRUD Functionality
 
@@ -123,11 +123,6 @@ Both the Header and Footer are present and consistent on all website pages.
 
 #### Home page:
 
-* **Website Logo**: Visually pleasing design, allowing users to immediately identify the site brand.
-* **Sign Up Button**: Allows users to be directed to the registration page to sign up for an account.
-* **Site Features**: Brief content showing site features.
-* **Top Trading Coins**: Cards showing top trading coins with information about each one.
-* **Contact Form**: Allows users to contact admin for feedback.
 
 #### My Profile:
 * **Profile Card**: Card showing relevant information on users profile, allowing users to quickly identify if they are using their desired account.
@@ -389,6 +384,29 @@ Additional information around these cloning steps can be found on [GitHub Pages 
 | image         |   String      | stores the image of the user
 | created_by    |   String      | stores the username who created the profile 
 | date_created  |   String      | stores the date the document was created 
+
+**Donation Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| produce_category      |   String      | stores the produce category
+| produce_name      |   String      | stores the produce name
+| expiary_date      |   String      | stores the expiary date of produce
+| quantity      |   String      | stores the quantity of produce
+| image         |   String      | stores the image of the user
+| created_by    |   String      | stores the username who created the profile 
+| date_created  |   String      | stores the date the donation form was submitted 
+
+
+**Order Seeds Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| seed_name      |   String      | stores the name of the seed
+| quantity      |   String      | stores the quantity of seeds
+| date_ordered      |   String      | stores the date of the order
 
 
 #### Setup Environmental Variables
