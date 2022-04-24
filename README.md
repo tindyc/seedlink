@@ -5,7 +5,7 @@
 ## **Deployed site**
 The live website can be found at the following link; [SeedLink](https://seed-link.herokuapp.com/).
 
-![SeedLink Mockup](assets/images/seedlink-responsive.png)
+![SeedLink Mockup](static/images/seedlink-responsive.png)
 
 ## 1. **UX**
 This project is part of the Code Institue Hackaton for Earth Day.
@@ -80,9 +80,12 @@ Overview of site and page structure, explaining functionality and purpose.
 
 At this point I began creating wireframes, using the above structure considerations. I used [Balsamiq](https://balsamiq.com/) these below;
 
-* [Home Page](assets/README/wireframes/wireframe-index.html.png)
-* [Profile Page](assets/README/wireframes/wireframe-profile.html.png)
-* [Login / Registration Page](assets/README/wireframes/wireframe-register-login.html.png)
+* [Home Page]()
+* [Profile Page]()
+* [Login / Registration Page]()
+* [Marketplace Page]()
+* [Order Seeds Page]()
+* [Donation Page]()
 
 ### **Surface**
 
@@ -91,7 +94,6 @@ This is the sensory design section of a website, or how it looks, feels and soun
 ![Seedlink Logo](static/images/logo.gif)
 
 #### **Colour & Styling**
-
 
 The resulting palette is below;
 
@@ -110,7 +112,6 @@ During the pre-development phase, I listed out some styling ideas that I thought
 
 * Font Awesome Icons : with hover effects to highlight key info 
 * Navigation
-* Sticky top
 * Mobile Side Nav: 'Burger' menu icon, expanding into side navbar on click
 * Logo: Navigates to the index page on click
 
@@ -525,6 +526,8 @@ All text content on the site were written by all team members of Planters.
 ### **Media**
 The photos and images used for this site were obtained from :
 
+* https://www.gardeningknowhow.com/houseplants/bonsai/bonsai-soil-requirements.htm
+* pexel.com
 
 ### **Acknowledgements**
 
