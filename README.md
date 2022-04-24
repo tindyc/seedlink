@@ -1,108 +1,467 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **SeedLink** - by Planters
 
-Welcome tindyc,
+## **Project overview**
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# [SeedLink](https://seed-link.herokuapp.com/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## **Deployed site**
+The live website can be found at the following link; [SeedLink](https://seed-link.herokuapp.com/).
 
-`python3 -m http.server`
+![SeedLink Mockup](assets/README//responsiveness/seedlink-responsive.png)
 
-A blue button should appear to click: _Make Public_,
+## 1. **UX**
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+### **User Stories**
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### Users
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Site Owner Goals
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+#### General
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### **Structure**
+Overview of site and page structure, explaining functionality and purpose.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#### Home Page:
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  * **Navigation Bar/Footer**: For easy navigation across the site and to external resources such as social media pages.
+  * **Website Logo**: To easily identify the 'Crypto Connect’' site branding.
+  * **Site Features**: To easily provide users with an overview of the website’s features.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+#### My Profile:
+ * **Profile Card**: To easily provide users key information of their own profile, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined.
+ * **Update Profile Button**: To allow users to edit their profile with easy access.
+ 
+#### Sign In Page:
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+ * **Username Input**: Text input box, allowing users to enter their username.
+ * **Password Input**: Text input box, allowing users to enter their password.
+ * **Sign In Button**: To allow users to submit entered information, and if correct credentials will be directed to the profile page.
+ * **Sign Up  Button**: To allow users to be directed to the registration page.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### Sign Up Page:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+ * **First Name Input**: Text input box, allowing users to enter their First Name.
+ * **Last Name Input**: Text input box, allowing users to enter their Last Name.
+ * **Username Input**: Text input box, allowing users to enter their username.
+ * **Email Input**: Text input box, allowing users to enter their email address.
+ * **Password Input**: Text input box, allowing users to enter their password.
+ * **Sign Up Button**: To allow users to submit entered information and register for an account.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### **Skeleton**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+At this point I began creating wireframes, using the above structure considerations. I used [Balsamiq](https://balsamiq.com/) these below;
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* [Home Page](assets/README/wireframes/wireframe-index.html.png)
+* [Profile Page](assets/README/wireframes/wireframe-profile.html.png)
+* [Login / Registration Page](assets/README/wireframes/wireframe-register-login.html.png)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### **Surface**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+This is the sensory design section of a website, or how it looks, feels and sounds.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![Seedlink Logo](static/images/logo.gif)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### **Colour & Styling**
 
-------
 
-## FAQ about the uptime script
+The resulting palette is below;
 
-**Why have you added this script?**
+![Seedlink Color Scheme](assets/README/images/color-palette.png)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+##### Colour Palette
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+#### **Language/Tone**
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+#### **Styling Considerations**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+During the pre-development phase, I listed out some styling ideas that I thought would be beneficial to the website. Many of these can be found in wireframes.
 
-**Can I opt out?**
+* Font Awesome Icons : with hover effects to highlight key info 
+* Navigation
+* Sticky top
+* Mobile Side Nav: 'Burger' menu icon, expanding into side navbar on click
+* Logo: Navigates to the index page on click
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+
+## 2. **Features**
+The site allows users to register for an account. Users are able to login and logout of the site. They can create, upload and update their own profiles. Registered users are able to view other member’s profiles and make connections with them. Users can search for other members using their name or location. Users can see all the connections they have made in their profile page and remove existing connections at any time. Users are able to upload new blog posts, edit and delete existing ones that they have created. 
+
+### CRUD Functionality
+
+Users can :
+
+- Add their profile
+- Edit their profile
+- Add Donations
+- Order Seeds
+
+### **Existing Features**
+#### The Header:
+
+* **Website Logo**: Builds brand awareness and identity amongst users.
+* **Navigation Bar**: Enable users to navigate the site easily and intuitively, as well as login/register their account.
+
+#### The Footer:
+
+* **Copyright**: Copyright information for brand awareness.
+* **Social Links**: Links to Social Media for brand awareness.
+
+Both the Header and Footer are present and consistent on all website pages.
+
+#### Home page:
+
+* **Website Logo**: Visually pleasing design, allowing users to immediately identify the site brand.
+* **Sign Up Button**: Allows users to be directed to the registration page to sign up for an account.
+* **Site Features**: Brief content showing site features.
+* **Top Trading Coins**: Cards showing top trading coins with information about each one.
+* **Contact Form**: Allows users to contact admin for feedback.
+
+#### My Profile:
+* **Profile Card**: Card showing relevant information on users profile, allowing users to quickly identify if they are using their desired account.
+* **Add Profile Button**: To allow users to create their profile.
+* **Update Profile Button**: To allow users to edit their profile with easy access.
+
+
+#### Add Profile page:
+
+* **Input areas for below profile data points**:
+    * **Full name** - Text
+    * **Birthday** - Date
+    * **Location** - Text
+    * **Profile Image** - Url or default img
+
+#### Edit Profile page:
+
+* **Input areas for below profile data points**:
+    * **Full name** - Text
+    * **Birthday** - Date
+    * **Location** - Text
+    * **Profile Image** - Url or default img
+
+#### Sign Up Page:
+
+  * **First Name Input**: Text input box, allowing users to enter their First Name.
+  * **Last Name Input**: Text input box, allowing users to enter their Last Name.
+  * **Username Input**: Text input box, allowing users to enter their username.
+  * **Email Input**: Text input box, allowing users to enter their email address.
+  * **Password Input**: Text input box, allowing users to enter their password.
+  * **Sign Up Button**: To allow users to submit entered information and register for an account.
+
+### **Features to consider implementing in future**
+
+
+## 3. **Database Design**
+MongoDB was the database solution used for the website development, using the below, structured plan.
+
+**Users Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| firstname     |   String      | stores the first name of the user 
+| lastname      |   String      | stores the last name of the user 
+| username      |   String      | stores the username of the user 
+| email         |   String      | stores the email address of the user 
+| password      |   String      | stores the hashed password of the user 
+| date_created  |   String      | stores the date the document was created 
+
+**Profiles Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| fullname      |   String      | stores the full name of the user 
+| birthday      |   String      | stores the birthday of the user 
+| location      |   String      | stores the location of the user 
+| image         |   String      | stores the image of the user
+| created_by    |   String      | stores the username who created the profile 
+| date_created  |   String      | stores the date the document was created 
+
+**Donation Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| produce_category      |   String      | stores the produce category
+| produce_name      |   String      | stores the produce name
+| expiary_date      |   String      | stores the expiary date of produce
+| quantity      |   String      | stores the quantity of produce
+| image         |   String      | stores the image of the user
+| created_by    |   String      | stores the username who created the profile 
+| date_created  |   String      | stores the date the donation form was submitted 
+
+
+**Order Seeds Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| seed_name      |   String      | stores the name of the seed
+| quantity      |   String      | stores the quantity of seeds
+| date_ordered      |   String      | stores the date of the order
+
+
+## 4. **Technologies Used**
+
+### Languages
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a> - Programming language providing content and structure of the website.</li>
+<li><a href="https://en.wikipedia.org/wiki/CSS">CSS</a> - Programming language providing styling of the website.</li>
+<li><a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> - Programming language used for various interactive elements of the website, including game logic, audio options etc.</li>
+<li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> - Programming language used to drive core site functionality including user login and push/retrieving database information.</li>
+<li><a href="https://en.wikipedia.org/wiki/Jinja_(template_engine)">Jinja</a> - Used to generate HTML from site templates</li>
+</ul>
+
+### Libraries
+<ul>
+<li><a href="https://fontawesome.com/">Font Awesome</a> - Library used for icons, such as social links and other images.</li>
+<li><a href="https://fonts.google.com/">Google Fonts</a> - Font style library.</li>
+<li><a href="https://jqueryui.com/">jQuery</a> - JavaScript library used for simplification of JS scripts and DOM manipulation.</li>
+<li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> - Micro-framework to simplify Python scripting and web server tasks.</li>
+<li><a href="https://werkzeug.palletsprojects.com/en/1.0.x/">Werkzeug</a> - Python library to manage user management integrity.</li>
+
+
+### Editors
+<ul>
+<li><a href="https://github.com/">GitHub</a> - Remote code repository.</li>
+<li><a href="https://gitpod.io/">GitPod</a> - IDE (Integrated Development Environment), for writing, editing and saving code.</li>
+<li><a href="https://balsamiq.com/">Balsamiq</a> - Wireframes for visual design testing.</li>
+</ul>
+
+### Tools
+<ul>
+<li><a href="https://developer.chrome.com/docs/devtools/">Chrome DevTools</a> - Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.</li>
+<li><a href="http://ami.responsivedesign.is/">Am I Responsive?</a> - Responsive design demo in ReadMe summary.</li>
+<li><a href="https://www.responsivedesignchecker.com/">Responsive Design Checker</a> - Check website response across device types.</li>
+</ul>
+
+### Database Management
+<li><a href="https://www.mongodb.com/">MongoDB</a> - Cloud based database management system, used for storing user profile and recipe information.</li>
+</ul>
+
+
+### Deployment Platform 
+<ul>
+<li><a href="https://www.heroku.com/">Heroku</a> - Remote hosting platform, for hosting of python driven websites and applications.</li>
+</ul>
+
+## 5. **Testing**
+
+The testing process can be seen in the [TESTING.md](testing.md) document.
+
+## 6. **Deployment**
+
+### Database Deployment
+
+### Application Hosting
+### **Heroku**
+
+The site is hosted using [Heroku](https://www.heroku.com/), deployed directly from the master branch of GitHub. The deployed site will update automatically as new commits are pushed to the master branch.
+
+#### Creating a Heroku app
+- From the Heroku dashboard:
+  - Select "New"
+  - Select "Create new app"
+
+- Add new app details to form:
+  - Add app name (must be unique)
+  - Select region
+  - Click "Create App"
+
+#### Setting Environmental Variables
+- From the Heroku dashboard:
+  - Select your app from the list
+
+- Select "Settings" from the top menu:
+  - Under 'Config Vars', select "Reveal Config Vars"
+  - Add environment variables in key-value pairs, click "Add" to add additional pairings.
+
+#### Deployment
+- Create required deployment files in the repository:
+  - requirements.txt
+      - Lists the required python modules for Heroku to install.
+    - To create:
+      - In your IDE terminal, type: ``pip freeze > requirements.txt``
+
+  - Procfile
+      -  Tell Heroku the command to launch the app.
+    - To create:
+      - in your IDE terminal, type: ``python app.py > Procfile``
+
+  - .gitignore (optional)
+      - Lists files and directories which should be deployed to live app, such as files with environmental passkeys.
+    - To create:
+      - In your IDE terminal, type: ``touch .gitignore``
+      - List the files and directories to be excluded from live deployment, within the .gitignore file.
+      - Save in your repository root directory.
+
+- From the application top menu:
+  - Select 'Deploy'
+  - Choose your Deployment method:
+    - Github:
+      - Select the correct Github account.
+      - Type in the repository name you wish to deploy.
+      - Choose the correct repository from search results.
+      - Select "Connect"
+
+    - Manual Deployment:
+      - Choose the correct branch you wish to deploy from the drop-down.
+      - Select "Deploy Branch"
+      - Heroku will return "Your App has successfully deployed". If this shows an error, troubleshooting will be needed.
+
+#### Automatic Deployment
+- From the application top menu:
+  - Select 'Deploy'
+  - Ensure app is connected to correct repository
+  - Under 'Automatic Deployment' section:
+    - Select 'Enable Automatic Deployment"
+
+### GitHub and GitPod repository management
+
+### **How to clone 'Crypto Connect’' in GitHub, GitPod and setup on Heroku.**
+
+To run a version of the site locally, you can clone this repository using the following steps;
+
+In a code editor of your choice;
+
+1. Go to [GitHub.com](https://github.com/)
+2. Click on 'Repositories'.
+3. Click on 'SeedLink’.'
+4. Click on the 'Code' button.
+5. Under 'HTTPS' click the clipboard icon to the right of the URL.
+6. In your IDE of choice, open a repository or create a new repository.
+7. Open Terminal \('Terminal' then 'New Terminal' from the top ribbon menu in GitPod.\)
+8. Type 'git clone', paste URL link and press enter.
+
+Additional information around these cloning steps can be found on [GitHub Pages Help Page](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+&nbsp;
+
+#### Installing Requirements
+- Install all requirements modules to your local IDE with the following CL:
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+ pip3 install -r requirements.txt
 ```
 
-**Anything more?**
+#### Create Collections in MongoDB
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- Login to your MongoDB account
+- Create a Cluster
 
----
+- Create a database using the following architecture;
 
-Happy coding!
+**Users Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| firstname     |   String      | stores the first name of the user 
+| lastname      |   String      | stores the last name of the user 
+| username      |   String      | stores the username of the user 
+| email         |   String      | stores the email address of the user 
+| password      |   String      | stores the hashed password of the user 
+| date_created  |   String      | stores the date the document was created 
+
+**Profiles Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| fullname      |   String      | stores the full name of the user 
+| birthday      |   String      | stores the birthday of the user 
+| location      |   String      | stores the location of the user 
+| image         |   String      | stores the image of the user
+| created_by    |   String      | stores the username who created the profile 
+| date_created  |   String      | stores the date the document was created 
+
+
+#### Setup Environmental Variables
+- Create a '.gitignore' file in the root directoy
+- Add 'env.py' and '__pycache__/' to the file list within .gitignore
+- Create a 'env.py' file
+- In the 'env.py' file write the following code;
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "[UNIQUE ID]")
+os.environ.setdefault("MONGO_URI", "[UNIQUE ID]")
+os.environ.setdefault("MONGO_DBNAME", "[UNIQUE ID]")
+
+```
+
+Note: For each sectionedn noted as [UNIQUE ID], you will need to provide your own unique identifier. These must also be aligned to Heroku environmental variables.
+
+### Setup Unique Identifies / Environment Variables
+
+#### SECRET_KEY
+
+This is required when using flash() and session() functions in flask. The key can be of your own choice, but it's advisable to use a randomly generated secure key from websites such as [RandomKeyGen.com](https://randomkeygen.com/).
+
+#### MONGO_URI
+
+This is used to connect you application to your MongoDB cluster.
+
+- Click 'Overview' tab from your Cluster, followed by 'Connect'.
+
+- Select 'Connect your application' from following window.
+
+- Select your correct version of Python and copy the connection string.
+
+- Replace the 'username' and 'password' text, with the relevant criteria you setup in 'Database Access'.
+
+#### MONGO_DBNAME
+
+This is the name of your database in MongoDB. Which can be found under the 'Collections' tab, under your cluster.
+
+#### Running Development Server
+This command is only available in Gitpod.
+
+To launch a Http server using the development mode code for the application, use the following command in your IDE:
+
+```
+
+python3 app.py http.server
+
+```
+
+The IDE will then open a port with an http address for you to access.
+
+
+## 7. **Credits**
+
+### **Technical**
+* [w3Schools](https://www.w3schools.com/) -For checking proper syntax of HTML and CSS elements and codes for Profile Tabs functionality.
+* [Slack](https://slack.com/intl/en-gb/) -Code function for flash messages.
+* [Autoprefixer](https://autoprefixer.github.io/) - For generating CSS browser prefixes.
+* [Stackoverflow](https://stackoverflow.com/) - For researching and troubleshooting JavaScript and Python code issues.
+* [MongoDB Documentation](https://docs.mongodb.com/) - For researching and troubleshooting database code commands and issues.
+
+### **Content**
+
+
+
+### **Media**
+
+The photos and images used for this site were obtained from :
+
+### **Acknowledgements**
+
+
+
+
