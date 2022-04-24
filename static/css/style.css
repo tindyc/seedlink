@@ -90,13 +90,7 @@ a:link {
     height: 100vh;
 }
 
-/*  Sign In*/
-
-.form-heading-signup {
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
+/*  Forms */
 .side-img img {
     width: 80%;
     height: 100%;

@@ -1,40 +1,55 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- Page Heading -->
-<div class="row text-center">
-    <div class="col-10 offset-1 col-md-6 offset-md-3">
-        <h1 class="form-heading-signup">Add Profile</h1>
-    </div>
-</div>
-<!-- Add Profile Form-->
-<form method="POST" action="" class="col-10 offset-1">
-    <div class="form-group">
-        <label for="fullname">Name</label>
-        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Name" required>
-    </div>
+<section class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row align-items-center h-100 my-5">
+        <div class="col-12 col-md-6">
+            <div class="row text-center">
+                <div class="col-10 offset-1 col-md-6 offset-md-3 text-center mb-3">
+                    <h1 class="form-heading-signup">Add Profile</h1>
+                </div>
+            </div>
 
-    <div class="form-group">
-        <label for="birthday">Birthday</label>
-        <input type="date" class="form-control" id="birthday" name="birthday" placeholder="birthday" required>
-    </div>
+            <!-- Add Profile Form-->
+            <div class="form-container my-auto">
+                <div class="row">
+                    <form method="POST" action="" class="col-8 offset-2">
+                        <div class="form-group">
+                            <input type="text" class="form-control mb-3" id="fullname" name="fullname" placeholder="Name"
+                                required>
+                        </div>
 
-    <div class="form-group">
-        <label for="location">Location</label>
-        <input type="text" class="form-control" id="location" name="location" placeholder="Location">
-    </div>
+                        <div class="form-group">
+                            <label for="birthday">Birthday</label>
+                            <input type="date" class="form-control mb-3" id="birthday" name="birthday" placeholder="birthday"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control mb-3" id="location" name="location"
+                                placeholder="Location">
+                        </div>
 
 
-    <div class="form-group">
-        <label for="image">Choose Image</label>
-        <input type="file" class="form-control-file" id="image" name="image">
-    </div>
+                        <div class="form-group">
+                            <label for="image">Add Profile Image</label>
+                            <input type="file" class="form-control-file mb-5" id="image" name="image">
+                        </div>
 
-    <div class="row">
-        <div class="col-12 text-center">
-            <button type="submit" class="btn">Save Profile</button>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-lg btn-success">Save Profile</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 side-img d-none d-md-block text-center">
+            <img src="../static/images/profile.jpg" alt="vegetables on a table">
         </div>
     </div>
-</form>
-
+</section>
 {% endblock %}

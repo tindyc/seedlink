@@ -2,43 +2,57 @@
 
 {% block content %}
 
-<!-- Page heading-->
-<div class="row text-center">
-    <div class="col-10 offset-1 col-md-6 offset-md-3">
-        <h1 class="form-heading-signup">Update Profile</h1>
+<section class="container-fluid">
+    <!-- Page Heading -->
+    <div class="row align-items-center h-100 my-5">
+        <div class="col-12 col-md-6">
+            <div class="row text-center">
+                <div class="col-10 offset-1 col-md-6 offset-md-3 text-center mb-3">
+                    <h1 class="form-heading-signup">Update Profile</h1>
+                </div>
+            </div>
+
+            <!-- Edit Profile form-->
+            <div class="form-container my-auto">
+                <div class="row">
+                    <form method="POST" action="{{ url_for('update_profile', profile_id=profile._id) }}"
+                        class="col-10 offset-1">
+
+                        <div class="form-group">
+                            <label for="fullname">Name</label>
+                            <input type="text" class="form-control mb-3" id="fullname" name="fullname"
+                                value="{{ profile.fullname }}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthday">Birthday</label>
+                            <input type="date" class="form-control mb-3" id="birthday" name="birthday"
+                                value="{{ profile.birthday }}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control mb-3" id="location" name="location"
+                                value="{{ profile.location}}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="image">Choose Image</label>
+                            <input type="file" class="form-control-file mb-5" id="image" name="image"
+                                value="{{ profile.image }}">
+                        </div>
+
+                        <div class="text-center mb-4">
+                            <button class="btn btn-lg btn-success mx-1 button-bottom" type="submit">Update Profile</button>
+                            <a href="{{ url_for('my_profile', username=session['user']) }}" class="btn btn-lg btn-outline-success mx-1 button-bottom">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 side-img d-none d-md-block text-center">
+            <img src="../static/images/profile.jpg" alt="vegetables on a table">
+        </div>
     </div>
-</div>
-<!-- Edit Profile form-->
-<div class="pb-5">
-    <form method="POST" action="{{ url_for('update_profile', profile_id=profile._id) }}" class="col-10 offset-1">
-
-        <div class="form-group">
-            <label for="fullname">Name</label>
-            <input type="text" class="form-control" id="fullname" name="fullname" value="{{ profile.fullname }}"
-                required>
-        </div>
-
-        <div class="form-group">
-            <label for="birthday">Birthday</label>
-            <input type="date" class="form-control" id="birthday" name="birthday" value="{{ profile.birthday }}" required>
-        </div>
-
-        <div class="form-group">
-            <label for="location">Location</label>
-            <input type="text" class="form-control" id="location" name="location"
-                value="{{ profile.location}}" required>
-        </div>
-
-        <div class="form-group">
-            <label for="image">Choose Image</label>
-            <input type="file" class="form-control-file" id="image" name="image" value="{{ profile.image }}">
-        </div>
-
-        <div class="text-center mb-4">
-            <button class="btn" type="submit">Update Profile</button>
-            <a href="{{ url_for('my_profile', username=session['user']) }}" class="btn">Cancel</a>
-        </div>
-    </form>
-</div>
-
+</section>
 {% endblock %}
