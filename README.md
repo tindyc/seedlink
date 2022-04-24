@@ -65,6 +65,10 @@ Overview of site and page structure, explaining functionality and purpose.
  * **Quantity Input**: Text input box, allowing users to enter the quantity they are willing to donate.
  * **Expiry date Input**: To allow users to enter the expiry date of the produce. 
  * **Donate Button**: To allow users to submit entered information and donate their produce.
+
+#### Marketplace:
+ * **Marketplace info**: To provide users details of the marketplace
+ * **Produce cards**: To provide key information of the produce, including quantiy and expiry date.
  
 ### **Skeleton**
 
@@ -77,7 +81,6 @@ At this point I began creating wireframes, using the above structure considerati
 ### **Surface**
 
 This is the sensory design section of a website, or how it looks, feels and sounds.
-
 
 ![Seedlink Logo](static/images/logo.gif)
 
@@ -107,7 +110,7 @@ During the pre-development phase, I listed out some styling ideas that I thought
 
 
 ## 2. **Features**
-
+The site allows users to register for an account. They are then able to login and logout of the site. They can create and update their own profiles. Registered users are able to upload their donations onto the marketplace database. Any site users can view what produce is available on the marketplace.
 
 ### CRUD Functionality
 
@@ -116,29 +119,29 @@ Users can :
 - Add their profile
 - Edit their profile
 - Add Donations
-- Order Seeds
+- Add seeds order request
 
 ### **Existing Features**
 #### The Header:
-
 * **Website Logo**: Builds brand awareness and identity amongst users.
 * **Navigation Bar**: Enable users to navigate the site easily and intuitively, as well as login/register their account.
 
 #### The Footer:
-
 * **Copyright**: Copyright information for brand awareness.
 * **Social Links**: Links to Social Media for brand awareness.
 
 Both the Header and Footer are present and consistent on all website pages.
 
 #### Home page:
-
+* **Website Logo**: Visually pleasing design, allowing users to immediately identify the site brand.
+* **Sign Up Button**: Allows users to be directed to the registration page to sign up for an account.
+* **Site Features**: Brief content showing site features.
+* **Recent Produce**: Cards showing recent produce donated to the marketplace.
 
 #### My Profile:
 * **Profile Card**: Card showing relevant information on users profile, allowing users to quickly identify if they are using their desired account.
 * **Add Profile Button**: To allow users to create their profile.
 * **Update Profile Button**: To allow users to edit their profile with easy access.
-
 
 #### Add Profile page:
 
@@ -164,6 +167,24 @@ Both the Header and Footer are present and consistent on all website pages.
   * **Email Input**: Text input box, allowing users to enter their email address.
   * **Password Input**: Text input box, allowing users to enter their password.
   * **Sign Up Button**: To allow users to submit entered information and register for an account.
+
+#### Order Seeds Page:
+ * **Name Input**: Text input box, allowing users to enter their Name.
+ * **Address Input**: Text input box, allowing users to enter their address.
+ * **Seed category Input**: Text input box, allowing users to choose seed category.
+ * **Quantity Input**: Text input box, allowing users to enter their desired quantity of the seeds.
+ * **Order Now Button**: To allow users to submit entered information and order the seeds.
+ 
+#### Donation Page:
+ * **Produce category Input**: Text input box, allowing users to choose produce category.
+ * **Produce Name Input**: Text input box, allowing users to enter the name of the produce.
+ * **Quantity Input**: Text input box, allowing users to enter the quantity they are willing to donate.
+ * **Expiry date Input**: To allow users to enter the expiry date of the produce. 
+ * **Donate Button**: To allow users to submit entered information and donate their produce.
+
+#### Marketplace:
+ * **Marketplace info**: To provide users details of the marketplace
+ * **Produce cards**: To provide key information of the produce, including quantiy and expiry date.
 
 ### **Features to consider implementing in future**
 
