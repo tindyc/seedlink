@@ -202,6 +202,8 @@ def order_seeds():
     if request.method == "POST":
         order_seeds = {
             "username": session["user"],
+            "fullname": request.form.get("fullname"),
+            "address": request.form.get("address"),
             "quantity": request.form.get("quantity"),
             "date_ordered": date.strftime("%d %b %Y"),
         }
