@@ -1,30 +1,36 @@
 # **SeedLink** - by Planters
 
-## **Project overview**
-
 # [SeedLink](https://seed-link.herokuapp.com/)
-
-
 
 ## **Deployed site**
 The live website can be found at the following link; [SeedLink](https://seed-link.herokuapp.com/).
 
-![SeedLink Mockup](assets/README//responsiveness/seedlink-responsive.png)
+![SeedLink Mockup](assets/images/seedlink-responsive.png)
 
 ## 1. **UX**
-
-
+This project is part of the Code Institue Hackaton for Earth Day.
+The Planters team have decided to build this Seedlink project to encourage people to do their part for the enviroment and their local community. Seedlink is a site for ordering seeds and sharing produce with the aim of promoting plant based eating, helping the environment and local community. Users are encourage to orders seeds and start growing in their own home to fight climate change. They are able to donate any excess produce to the marketplace and share with the local community to reduce foodwaste.
 
 ### **User Stories**
 
+-	I want to be able to log on and order seeds easily.
+-	I want to be able to donate my surplus vegetables easily
+-	I want to be able to quickly see when the next market day is
+-	I want it to be easy to sign in.
+-	I want to be able to give back to my local community
+-	I want to be able to grow a tree in my back garden
 
 #### Users
 
+- SeedLink is aimed at people who want to do their bit for the environment and their local community. The users of this site will have an interest in plant-based eating and growing their fruit and vegetables at home.  They will have an interest in swapping vegetables with other growers and sharing with others in need.
 
 #### Site Owner Goals
-
+-	I want the site to be intuitive and easy to use
+-	I want the users to be able to log in easily 
+- I want to encourage repeat visits to the site
 
 #### General
+- As a user I want to receive clear feedback for my actions on the site, so I know they are complete or if further steps are needed.
 
 ### **Structure**
 Overview of site and page structure, explaining functionality and purpose.
