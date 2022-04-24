@@ -2,49 +2,56 @@
 
 {% block content %}
 <!-- Page Heading -->
-<div class="row text-center">
-    <div class="col-10 offset-1 col-md-6 offset-md-3">
-        <h1 class="form-heading-signup">Donation</h1>
-    </div>
-</div>
-<!-- Add Donation Form-->
-<form method="POST" action="" class="col-10 offset-1">
-
-    <div class="form-group">
-        <label for="product_category">Produce Category</label>
-        <select class="form-select" aria-label="Produce Category">
-            <option value="1">Choose from list</option>
-            <option value="2">Fruits</option>
-            <option value="3">Vegetables</option>
-            <option value="4">Seeds</option>
-          </select>
-    </div>
-
-    <div class="form-group">
-        <label for="product_name">Product Name</label>
-        <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Product Name" required>
-    </div>
-
-    <div class="form-group">
-        <label for="quantity">Quantity</label>
-        <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Quantity" required>
-    </div>
-
-    <div class="form-group">
-        <label for="expiry_date">Expiry Date</label>
-        <input type="date" class="form-control" id="expiry_date" name="expiry_date" placeholder="Expiry Date">
-    </div>
-
-    <div class="form-group">
-        <label for="image">Choose Image</label>
-        <input type="file" class="form-control-file" id="image" name="image">
-    </div>
-
+<section class="container-fluid">
     <div class="row">
-        <div class="col-12 text-center">
-            <button type="submit" class="btn">Donate!</button>
+        <div class="col-lg-7 col-md-7 col-sm-12">
+            <div class="row text-center">
+                <div class="col-10 offset-1 col-md-6 offset-md-3">
+                    <h1 class="form-heading-signup">Donation</h1>
+                </div>
+            </div>
+            <!-- Add Donation Form-->
+            <form method="POST" action="" class="col-10 offset-1">
+
+                <div class="form-group">
+                    <select class="form-select mb-3" aria-label="Produce Category">
+                        <option value="1">Choose from list</option>
+                        <option value="2">Fruits</option>
+                        <option value="3">Vegetables</option>
+                        <option value="4">Seeds</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control mb-3" id="product_name" name="product_name"
+                        placeholder="Product Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" class="form-control mb-3" id="quantity" name="quantity" placeholder="Quantity"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <input type="date" class="form-control mb-3" id="expiry_date" name="expiry_date"
+                        placeholder="Expiry Date">
+                </div>
+
+                <div class="form-group">
+                    <input type="file" class="form-control-file mb-3" id="image" name="image">
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn mb-3" id="donate-btn">Donate!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-4 sign-up d-none d-md-block ">
+            <img src="../static/images/donations.jpg" alt="Please give donations">
         </div>
     </div>
-</form>
+</section>
 
 {% endblock %}
