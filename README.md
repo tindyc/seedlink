@@ -60,7 +60,7 @@ Overview of site and page structure, explaining functionality and purpose.
  * **Update Profile Button**: To allow users to edit their profile with easy access.
 
 #### Donation Page:
- * **Produce category Input**: Text input box, allowing users to choose produce category.
+ * **Produce category Input**: List of selectoion allowing users to choose produce category.
  * **Produce Name Input**: Text input box, allowing users to enter the name of the produce.
  * **Quantity Input**: Text input box, allowing users to enter the quantity they are willing to donate.
  * **Expiry date Input**: To allow users to enter the expiry date of the produce. 
@@ -161,26 +161,30 @@ Both the Header and Footer are present and consistent on all website pages.
 
 #### Sign Up Page:
 
-  * **First Name Input**: Text input box, allowing users to enter their First Name.
-  * **Last Name Input**: Text input box, allowing users to enter their Last Name.
-  * **Username Input**: Text input box, allowing users to enter their username.
-  * **Email Input**: Text input box, allowing users to enter their email address.
-  * **Password Input**: Text input box, allowing users to enter their password.
-  * **Sign Up Button**: To allow users to submit entered information and register for an account.
+* **Input areas for below registration data points**:
+  * **First Name** - Text
+  * **Last Name** - Text
+  * **Username** - Text
+  * **Enail** - Text
+  * **Password** - Text
+
 
 #### Order Seeds Page:
- * **Name Input**: Text input box, allowing users to enter their Name.
- * **Address Input**: Text input box, allowing users to enter their address.
- * **Seed category Input**: Text input box, allowing users to choose seed category.
- * **Quantity Input**: Text input box, allowing users to enter their desired quantity of the seeds.
- * **Order Now Button**: To allow users to submit entered information and order the seeds.
+
+* **Input areas for below seeds ordering data points**:
+  * **Name** - Text
+  * **Address** - Text
+  * **Seed Category** - Text
+  * **Quantity** - Selector
+
  
 #### Donation Page:
- * **Produce category Input**: Text input box, allowing users to choose produce category.
- * **Produce Name Input**: Text input box, allowing users to enter the name of the produce.
- * **Quantity Input**: Text input box, allowing users to enter the quantity they are willing to donate.
- * **Expiry date Input**: To allow users to enter the expiry date of the produce. 
- * **Donate Button**: To allow users to submit entered information and donate their produce.
+
+ * **Input areas for below seeds donation points**:
+ * **Produce Category** - Selector
+ * **Quantity** - Text
+ * **Expiry Date** - Date
+
 
 #### Marketplace:
  * **Marketplace info**: To provide users details of the marketplace
@@ -189,8 +193,11 @@ Both the Header and Footer are present and consistent on all website pages.
 ### **Features to consider implementing in future**
 
   * **Image Upload**: Use Cloudinary to support image upload
-  * **Reservation**: Implement a reservation / ticketed system for users to reserve produce
-
+  * **Reservation**: Implement a reservation / ticketed system for users to reserve produce at the marketplace to avoid disappointments
+  * **Contact US**: Add a contact us page to allow users to communicate with Seedlink and implement with EmailJs.
+* **Social Media Sharing** - Allow users to share available produce on the marketplace directly to their social media accounts.
+* **Chat functionality** - Allows registered users to private message individual members and order surplus produce directly.
+* **Advanced User Profile** - Allow users to customize their own profile with custom information they wish to provide and share with other members.
 
 ## 3. **Database Design**
 MongoDB was the database solution used for the website development, using the below, structured plan.
@@ -238,6 +245,8 @@ MongoDB was the database solution used for the website development, using the be
 | **Key**        |  **Type**     | **Purpose**|
 |-------------- |-------------- |-------------|
 | _id           |  ObjectId     | ObjectId of this document
+| name      |   String      | stores the name of the user
+| address      |   String      | stores the address of the user
 | seed_name      |   String      | stores the name of the seed
 | quantity      |   String      | stores the quantity of seeds
 | date_ordered      |   String      | stores the date of the order
@@ -249,7 +258,6 @@ MongoDB was the database solution used for the website development, using the be
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a> - Programming language providing content and structure of the website.</li>
 <li><a href="https://en.wikipedia.org/wiki/CSS">CSS</a> - Programming language providing styling of the website.</li>
-<li><a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> - Programming language used for various interactive elements of the website, including game logic, audio options etc.</li>
 <li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> - Programming language used to drive core site functionality including user login and push/retrieving database information.</li>
 <li><a href="https://en.wikipedia.org/wiki/Jinja_(template_engine)">Jinja</a> - Used to generate HTML from site templates</li>
 </ul>
@@ -258,7 +266,6 @@ MongoDB was the database solution used for the website development, using the be
 <ul>
 <li><a href="https://fontawesome.com/">Font Awesome</a> - Library used for icons, such as social links and other images.</li>
 <li><a href="https://fonts.google.com/">Google Fonts</a> - Font style library.</li>
-<li><a href="https://jqueryui.com/">jQuery</a> - JavaScript library used for simplification of JS scripts and DOM manipulation.</li>
 <li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> - Micro-framework to simplify Python scripting and web server tasks.</li>
 <li><a href="https://werkzeug.palletsprojects.com/en/1.0.x/">Werkzeug</a> - Python library to manage user management integrity.</li>
 
@@ -435,12 +442,15 @@ Additional information around these cloning steps can be found on [GitHub Pages 
 | **Key**        |  **Type**     | **Purpose**|
 |-------------- |-------------- |-------------|
 | _id           |  ObjectId     | ObjectId of this document
+| name      |   String      | stores the name of the user
+| address      |   String      | stores the address of the user
 | seed_name      |   String      | stores the name of the seed
 | quantity      |   String      | stores the quantity of seeds
 | date_ordered      |   String      | stores the date of the order
 
 
-#### Setup Environmental Variables
+### Setup Unique Identifies / Environment Variables
+
 - Create a '.gitignore' file in the root directoy
 - Add 'env.py' and '__pycache__/' to the file list within .gitignore
 - Create a 'env.py' file
@@ -459,7 +469,6 @@ os.environ.setdefault("MONGO_DBNAME", "[UNIQUE ID]")
 
 Note: For each sectionedn noted as [UNIQUE ID], you will need to provide your own unique identifier. These must also be aligned to Heroku environmental variables.
 
-### Setup Unique Identifies / Environment Variables
 
 #### SECRET_KEY
 
@@ -505,15 +514,16 @@ The IDE will then open a port with an http address for you to access.
 * [MongoDB Documentation](https://docs.mongodb.com/) - For researching and troubleshooting database code commands and issues.
 
 ### **Content**
-
-
+All text content on the site were written by all team members of Planters.
 
 ### **Media**
-
 The photos and images used for this site were obtained from :
+
 
 ### **Acknowledgements**
 
-
+* Special Thank you to Stefan for his encouragement and support on the development of this project.
+* Thanks to our kids for letting us neglect them whilst we were busy coding!
+* Thanks to those on the Slack community for answering our many questions 24:7!
 
 
