@@ -80,24 +80,22 @@ Overview of site and page structure, explaining functionality and purpose.
 
 At this point I began creating wireframes, using the above structure considerations. I used [Balsamiq](https://balsamiq.com/) these below;
 
-* [Home Page]()
-* [Profile Page]()
-* [Login / Registration Page]()
-* [Marketplace Page]()
-* [Order Seeds Page]()
-* [Donation Page]()
+* [Home Page](./static/images/wireframe-home.png)
+* [Profile Page](./static/images/wireframe-profile.png)
+* [Login / Registration Page](./static/images/wireframe-login_register.png)
+* [Marketplace Page](./static/images/wireframe-marketplace.png)
 
 ### **Surface**
 
 This is the sensory design section of a website, or how it looks, feels and sounds.
 
-![Seedlink Logo](static/images/logo.gif)
+![Seedlink Logo](static/images/logo.png)
 
 #### **Colour & Styling**
 
 The resulting palette is below;
 
-![Seedlink Color Scheme](assets/README/images/color-palette.png)
+![Seedlink Color Scheme](./static/images/color-palette.png)
 
 ##### Colour Palette
 
