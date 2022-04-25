@@ -79,13 +79,6 @@ a:link {
     height: 400px;
 }
 
-@media only screen and (max-width: 846px) {
-    .tree-img {
-        width: 275px;
-        height: 275px;
-    }
-}
-
 #main-section {
     height: 100vh;
 }
@@ -115,4 +108,19 @@ a:link {
 #marketplace-img > h1 {
     color: #fff;
     font-size: 3.5em;
+}
+
+/* Profile */
+.profile-img {
+    width: 200px;
+    height: 200px; 
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 846px) {
+    .tree-img {
+        width: 275px;
+        height: 275px;
+    }
 }
