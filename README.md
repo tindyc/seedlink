@@ -302,7 +302,46 @@ MongoDB was the database solution used for the website development, using the be
 
 ## 5. **Testing**
 
-The testing process can be seen in the [TESTING.md](testing.md) document.
+All testing was done manually. All the links were tested and buttons to test functionallity and if you are
+directed to the correct page or external link. A fake account was created to test the profile page and to 
+make orders and donations.
+
+### Header and Footer
+- All links in the navbar was manually tested, no issues were found.
+- All social media links redirect you to the correct pages.
+- Nitty Gritty section and links in the footer does not work and must be updated
+
+### Home Page Main Section
+- All links and buttons were tested and no issues were found.
+
+### Marketplace Main Section
+- No links or buttons in main area 
+- When produce is donated the Marketplace page is updated with the product
+
+### Sign In and Sign Up Main Section
+- All input fields are required and will not proceed untill completed 
+- Sign In / Sign Up button works when clicked
+- Sign In / Sign Up links redirects you to the correct page
+
+### My Profile
+- Order seeds take you to a order seeds page
+- Donate button redirects you to the donate page
+- Update profile allows you to update your profile but clicking on the update button gives and error
+and must be fixed.
+- The nav bar has extra links , Donations, Order Seeds and sign out all these links work and redirects you
+to the correct pages
+
+### Donations Page  
+
+- All input fields are required and button works.
+- When  the from is completed it redirects you to the marketplace page and gives you a notification at the 
+top of the page.
+- The marketplace page is updated with your donation.
+
+### Order Seeds 
+- All input fields are required and button works.
+- When  the from is completed it redirects you to the marketplace page and gives you a notification at the 
+top of the page.
 
 ## 6. **Deployment**
 
