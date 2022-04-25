@@ -71,7 +71,7 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ product.product_name }}</h5>
                                 <p class="text-muted">{{ product.product_category }}</p>
-                                <p class="text-muted">{{ product.expiry_date }}</p>
+                                <p class="text-muted">Expiry Date: {{ product.expiry_date }}</p>
                                 <p class="card-text">{{ product.quantity }}
                                     {% if product.product_category == "Seeds" %}seeds{% else %}Kg.{% endif %} Available
                                 </p>

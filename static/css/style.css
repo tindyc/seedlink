@@ -79,24 +79,11 @@ a:link {
     height: 400px;
 }
 
-@media only screen and (max-width: 846px) {
-    .tree-img {
-        width: 275px;
-        height: 275px;
-    }
-}
-
 #main-section {
     height: 100vh;
 }
 
-/*  Sign In*/
-
-.form-heading-signup {
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
+/*  Forms */
 .side-img img {
     width: 80%;
     height: 100%;
@@ -121,4 +108,19 @@ a:link {
 #marketplace-img > h1 {
     color: #fff;
     font-size: 3.5em;
+}
+
+/* Profile */
+.profile-img {
+    width: 200px;
+    height: 200px; 
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 846px) {
+    .tree-img {
+        width: 275px;
+        height: 275px;
+    }
 }

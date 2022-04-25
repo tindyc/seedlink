@@ -2,44 +2,51 @@
 
 {% block content %}
 
-    <!-- Display user profile-->
+<div class="container-fluid">
     <div class="row">
-        <div class="col-10 offset-1 ">
-            <div id="profile" class="tabcontent mb-3 mt-4 text-center">
-                <h2>My Profile</h2>
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                        {% if profiles|length > 0 %}
-                        {% for profile in profiles %}
-                        <div class="image-container">
-                            <img class="card-img-top img-fluid"
-                                src="{{ url_for('static', filename='images/'+profile.image ) }}"
-                                alt="{{ profile.fullname }}">
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4 offset-lg-2 ml-2">
-                        <div class="profile-info-container mb-2">
-                            <h3 class="mb-0 font-weight-bold profile-info">{{ profile.fullname }}</h3>
-                            <p class="mb-0"><strong class="profile-info">Birthday:</strong> {{ profile.birthday }}
-                                <br><strong class="profile-info">Location:</strong> {{ profile.location }}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <a href="{{ url_for('update_profile', profile_id=profile._id) }}" class="btn updateprofilebtn">Update Profile</a>
-                    </div>
-                    {% endfor %}
+        <div class="col-md-5">
+            <div class="bg-light my-5 mx-3 p-5 text-center">
+                {% if profiles|length > 0 %}
+                {% for profile in profiles %}
+                <div class="image-container my-5">
+                    <img class="profile-img img-fluid rounded-circle"
+                        src="{{ url_for('static', filename='images/'+profile.image ) }}" alt="{{ profile.fullname }}">
+                    <p class=text-muted>{{ session.user }}</p>
                 </div>
+                <div class="profile-info-container mb-5">
+                    <h3 class="mb-0 font-weight-bold profile-info">{{ profile.fullname }}</h3>
+                    <p class="mb-0"><strong class="profile-info">Birthday:</strong> {{ profile.birthday }}
+                        <br><strong class="profile-info">Location:</strong> {{ profile.location }}
+                    </p>
+                </div>
+                <div class="text-center">
+                    <a href="{{ url_for('update_profile', profile_id=profile._id) }}"
+                        class="btn btn-lg btn-success updateprofilebtn">Update
+                        Profile</a>
+                </div>
+                {% endfor %}
                 {% else %}
-                <div class="col-12 text-center mt-2">
-                    <h3>You have not added your profile yet</h3>
-                    <h3>Please add your profile</h3>
-                    <a href="{{ url_for('add_profile') }}" class="btn" type="submit">Add Your Profile</a>
+                <div class="text-center">
+                    <h4>You have not added your profile yet</h4>
+                    <h4 class="mb-5">Please add your profile</h4>
+                    <a href="{{ url_for('add_profile') }}" class="btn btn-lg btn-success" type="submit">Add Your
+                        Profile</a>
                 </div>
-                {% endif %}
+            </div>
+            {% endif %}
             </div>
         </div>
+        <div class="col-md-7 my-5 p-3">
+            {% if profiles|length > 0 %}
+            <h1 class="mb-5">Hi {{ session.user }}</h1>
+
+            <div class="mb-5">
+                <a href="{{ url_for('order_seeds') }}" class="btn btn-lg btn-success mx-1 button-bottom">New Order</a>
+                <a href="{{ url_for('add_donation') }}" class="btn btn-lg btn-outline-success border-2 mx-1 button-bottom">Donate Produce</a>
+            </div>
+            {% endif %}
+        </div>
     </div>
+</div>
 
 {% endblock %}
